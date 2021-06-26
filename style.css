@@ -1,0 +1,120 @@
+body {
+  font-family: monospace;
+  background:#FFF;
+  margin:0;
+}
+
+body::-webkit-scrollbar {
+  width: 0.5em;
+}
+
+body::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: darkgrey;
+  border: 4px solid darkgrey;
+  border-radius: 8px;
+}
+
+svg {
+  margin: 20px auto;
+}
+
+#bsc_middle_cube, #bsc_outer_elements, #ftm_up, #ftm_down {
+  visibility:hidden;
+}
+
+.main-section {
+  position: relative;
+  top: 100px;
+  transform: translateY(50%);
+  text-align: center;
+}
+
+.main-titles {
+  width: 50%;
+  display: inline;
+  float: left;
+}
+
+.main-titles h1 {
+  font-size: 3.5em;
+}
+
+.main-titles p {
+  font-size: 1.5em;
+}
+
+.main-animation {
+  width: 50%;
+  display: inline;
+  float: left;
+  text-align: center;
+}
+
+.input_field {
+  height: 40px;
+  border-radius: 50px;
+  padding: 0px 20px;
+  border: 1px solid grey;
+}
+
+.get_balances_button {
+  height: 40px;
+  width: 50px;
+  margin: 0;
+  padding: 0;
+  border-radius: 50px;
+  vertical-align: middle;
+  cursor: pointer;
+  border: 1px solid grey;
+}
+
+.metadata_balances_section {
+  display: none;
+}
+
+.metadata_balances_section h2 {
+  color: #000;
+}
+
+#metadata {
+  color: #000;
+  list-style-type: none;
+  text-align: left;
+}
+
+#tokenTableFtm {
+  color: #000;
+  padding-bottom: 150px;
+  width: 100%;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#tokenTableBsc {
+  color: #000;
+  padding-bottom: 150px;
+  width: 100%;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#tokenTableEth {
+  color: #000;
+  padding-bottom: 150px;
+  width: 100%;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+table td {
+  text-align: center;
+  border-bottom: 1px solid grey;
+  padding: 0;
+}

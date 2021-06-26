@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>CC Balance Tracker</title>
+  <link href='./style.css' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+</head>
+<body>
+  <div>
+    <div style="text-align:center">
+      <h1>Cross-Chain Balance Tracker</h1>
+      <p>One place for all your assets</p>
+      <!-- ETHEREUM-BSC-FANTOM LOGO -->
+      <div>
+        <svg width="75" height="75" viewBox="0 0 319 312" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <g>
+            <path id="eth_up" d="M159.467 0L73 158.894L159.467 215.499L245.935 158.894L159.467 0Z" fill="#393939"/>
+            <path id="eth_down" d="M159.468 311.999L245.5 177.053L159.468 233L73.0001 177.053L159.468 311.999Z" fill="#393939"/>
+
+            <path id="bsc_middle_cube" fill-rule="evenodd" clip-rule="evenodd" d="M199.608 156L159.431 116.563L129.713 145.704L119.126 156.062L159.367 195.437L199.608 156.062V156Z" fill="#393939"/>
+            <path id="bsc_outer_elements" fill-rule="evenodd" clip-rule="evenodd" d="M97.5086 131.102L159.432 70.512L221.355 131.165L257.387 95.9088L159.432 0L61.477 95.8464L97.5086 131.102ZM0 156L36.0316 120.744L72.0633 156L36.0316 191.256L0 156ZM97.5086 180.898L159.432 241.488L221.355 180.835L257.451 216.091L159.432 312L61.4132 216.091L97.5086 180.898ZM246.801 156L282.832 120.744L318.864 156L282.832 191.256L246.801 156Z" fill="#393939"/>
+
+            <path id="ftm_up" fill-rule="evenodd" clip-rule="evenodd" d="M234.598 249.686L159.221 293.656L83.8442 249.686V172.739L159.221 216.709L234.598 172.739V249.686ZM65 161.5V259.108L159.221 312.5L253.442 259.108V161.5L159.221 216.709L65 161.5Z" fill="#393939"/>
+            <path id="ftm_down" fill-rule="evenodd" clip-rule="evenodd" d="M178.065 108.354L234.598 75.3769V141.332L178.065 108.354ZM83.8442 75.3769L140.377 108.354L83.8442 141.332V75.3769ZM168.643 124.058L225.176 157.035L168.643 190.013V124.058ZM149.799 190.013L93.2663 157.035L149.799 124.058V190.013ZM225.176 59.6734L159.221 97.3618L93.2663 59.6734L159.221 20.4146L225.176 59.6734ZM65 53.392V162L83.8442 172.739L159.221 216.709L253.442 162V53.392L159.221 0L65 53.392Z" fill="#393939"/>
+          </g>
+        </svg>
+      </div>
+      <input class="input_field" type="text" size="60" id="address" value="0x80E46246E765F301fCb6940906eB86760E25E079">
+      <button class="get_balances_button" onclick="getTokenDataFtm();getTokenDataEth();getTokenDataBsc();">
+        <i class="fa fa-wallet"></i></button>
+      </div>
+  </div>
+  <div id="metadata_balances_section">
+    <select class="input_field" style="display:none" name="chain" id="chain">
+
+      <!-- Testnet value 4002 -->
+      <option value="250"> Fantom-Opera Testnet </option>
+    </select>
+
+    <h2>Wallet Metadata</h2>
+    <ul id="metadata"></ul>
+
+    <h2>Token Balances</h2>
+    <h3>Fantom-Opera</h3>
+    <table id="tokenTableFtm"></table>
+
+    <h3>Ethereum Mainnet</h3>
+    <table id="tokenTableEth"></table>
+
+    <h3>Binance Smart Chain</h3>
+    <table id="tokenTableBsc"></table>
+  </div>
+
+
+</body>
+<script src="https://unpkg.co/gsap@3/dist/gsap.min.js"></script>
+<script src="https://assets.codepen.io/16327/MorphSVGPlugin3.min.js"></script>
+<script charset="utf-8"
+        src="https://cdn.ethers.io/scripts/ethers-v4.min.js"
+        type="text/javascript">
+</script>
+<script src="./ftm-script.js"></script>
+<script src="./eth-script.js"></script>
+<script src="./bsc-script.js"></script>
+<script src="./morph-script.js"></script>
+</html>
